@@ -60,9 +60,14 @@ export default function Editeuser() {
         // setImage(e.target.files[0]);
         const file = e.target.files[0];
         if (file) {
-            setImage(URL.createObjectURL(file))
+            setImage(file)
+            setForm({ ...form, image: file })
+            // setImage(URL.createObjectURL(file))
         }
+        console.log("File is - ", file);
     };
+
+
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -73,12 +78,15 @@ export default function Editeuser() {
         formData.append('phone', form.phone)
         formData.append('city', form.city)
         formData.append('status', form.status)
-        // if (image) {
-        //     formData.append('image', image)
-        // }
-        if (image && typeof image !== "string") {
-            formData.append('image', image);
+
+        if (form.image instanceof File) {
+            formData.append('image', form.image)
         }
+        console.log(form.image);
+
+        // if (image && typeof image !== "string") {
+        //     formData.append('image', image);
+        // }
 
         try {
             await updateData(id, formData);
@@ -170,18 +178,7 @@ export default function Editeuser() {
                             ),
                         }}
                     />
-                    {/* <FormControl fullWidth margin="normal">
-                        <InputLabel>Status</InputLabel>
-                        <Select
-                            name="status"
-                            value={form.status}
-                            onChange={handleChange}
-                            label="Status"
-                        >
-                            <MenuItem value="Inactive">Inactive</MenuItem>
-                            <MenuItem value="Active">Active</MenuItem>
-                        </Select>
-                    </FormControl> */}
+
 
                     <Box sx={{ mt: 3, mb: 2, textAlign: 'center' }}>
                         <input
@@ -201,9 +198,10 @@ export default function Editeuser() {
                         </Button>
 
                         {image && (
-                            <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
+                            <Box sx={{ mt: 2, display: 'flex', justifyContent: 'space-evenly' }}>
                                 <Avatar
-                                    src={typeof image === "string" ? `http://localhost:8500/${image}` : URL.createObjectURL(image)}
+                                    src={typeof image === "string" ? `http://localhost:8500/server/${image}` 
+                                        : URL.createObjectURL(image)}
                                     // src={URL.createObjectURL(image)}
                                     alt="Employee"
                                     sx={{ width: 80, height: 80 }}

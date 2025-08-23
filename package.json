@@ -1,0 +1,26 @@
+{
+  "name": "next_node_mongob_api_employee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+   "start:server": "cd server && node server.js",
+    "start:client": "cd client && npm run dev",
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Souravdas54/next_node_mongob_api_employee.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Souravdas54/next_node_mongob_api_employee/issues"
+  },
+  "homepage": "https://github.com/Souravdas54/next_node_mongob_api_employee#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}

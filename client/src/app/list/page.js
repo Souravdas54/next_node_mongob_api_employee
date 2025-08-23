@@ -71,7 +71,7 @@ export default function Listpage() {
       </Box>
 
       {msg && (
-        <Alert severity="info" color='error' sx={{ mb: 2 }}>
+        <Alert severity="info" color='success' sx={{ mb: 2 }}>
           {msg}
         </Alert>
       )}
