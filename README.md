@@ -16,18 +16,18 @@ Open a terminal and change to the NEXT_NODE_MONGO_API_EMPLOYEE/ directory: cd NE
 # Edit the package.json in the NEXT_NODE_MONGO_API_EMPLOYEE/ folder to include scripts for running both the client and server. Add the following under the 
 "scripts" section:
 
-## {
-  ## "name": "NEXT_NODE_MONGO_API_EMPLOYEE",
-##   "version": "1.0.0",
-##   "scripts": {
-   ##  "start:server": "cd server && node server.js",
-  ## "start:client": "cd client && npm run dev",
-   ##  "start": "concurrently \"npm run start:server\" \"npm run start:client\""
- ##  },
- ##  "devDependencies": {
-  ##   "concurrently": "^8.2.2"
- ## }
-## }
+{
+   "name": "NEXT_NODE_MONGO_API_EMPLOYEE",
+   "version": "1.0.0",
+  "scripts": {
+     "start:server": "cd server && node server.js",
+   "start:client": "cd client && npm run dev",
+     "start": "concurrently \"npm run start:server\" \"npm run start:client\""
+   },
+   "devDependencies": {
+     "concurrently": "^8.2.2"
+  }
+ }
 
 start:server: Runs the Express.js server (assumes server.js exists in the server/ folder).
 start:client: Runs the Next.js development server (assumes the client/ folder has a package.json with a dev script, typically next dev).
