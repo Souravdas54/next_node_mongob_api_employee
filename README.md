@@ -14,9 +14,9 @@ Open a terminal and change to the NEXT_NODE_MONGO_API_EMPLOYEE/ directory: cd NE
 
 ## 4 . Update the Root package.json:
 # Edit the package.json in the NEXT_NODE_MONGO_API_EMPLOYEE/ folder to include scripts for running both the client and server. Add the following under the "scripts" section:
-
+# note : Click on the README.md file, then click on Code or Blame, copy from "scripts" and paste it into your "package.json" file.
 ## {
-   "name": "NEXT_NODE_MONGO_API_EMPLOYEE",
+   "name": "",
    "version": "1.0.0",
   "scripts": {
    "start:server": "cd server && node server.js",
