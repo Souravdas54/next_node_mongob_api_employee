@@ -14,8 +14,8 @@ Open a terminal and change to the NEXT_NODE_MONGO_API_EMPLOYEE/ directory: cd NE
 
 ## 4 . Update the Root package.json:
 # Edit the package.json in the NEXT_NODE_MONGO_API_EMPLOYEE/ folder to include scripts for running both the client and server. Add the following under the "scripts" section:
-# note : Click on the README.md file, then click on Code or Blame, copy from "scripts" and paste it into your "package.json" file.
-## {
+# Note : Click on the README.md file, then click on Code or Blame, copy and paste from "scripts" to your "package.json" file just before "devDependencies".
+ {
    "name": "",
    "version": "1.0.0",
   "scripts": {
@@ -26,7 +26,7 @@ Open a terminal and change to the NEXT_NODE_MONGO_API_EMPLOYEE/ directory: cd NE
    "devDependencies": {
    "concurrently": "^8.2.2"
   }
- ## }
+}
 
 start:server: Runs the Express.js server (assumes server.js exists in the server/ folder).
 start:client: Runs the Next.js development server (assumes the client/ folder has a package.json with a dev script, typically next dev).
